@@ -7,8 +7,8 @@ public class PagesZero {
 
     public static Page page() {
 
-        System.out.println("====================================");
-        String pText = "You awake with a start. Where are you? How did you " +
+        String pText = "====================================\n";
+        pText += "You awake with a start. Where are you? How did you " +
                 "get here? You don't remember anything before this moment, yet " +
                 "somehow you find yourself waking from a mysterious slumber within " +
                 "a bare and circular room. There are no windows or defining " +
@@ -19,6 +19,6 @@ public class PagesZero {
         List<Choice> choices = new ArrayList<>();
         choices.add(new Choice("When you are ready to pass through the door, press '1'.", 1));
 
-        return new Page(pText, 11, choices);
+        return new Page(pText, 0, choices);
     }
 }

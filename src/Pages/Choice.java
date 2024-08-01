@@ -16,7 +16,16 @@ public class Choice {
 
     static public int getChoice() {
         System.out.println("-->");
-        return Integer.parseInt(s.nextLine());  // Wrapper class
+        String playerInput = s.nextLine();
+        if (playerInput.equals("?")) {
+            return -1;
+        }
+        try {
+            return Integer.parseInt(playerInput);  // Wrapper class
+        } catch (Exception e) {
+            return 0;
+        }
+
     }
 
     public void drawChoice() {

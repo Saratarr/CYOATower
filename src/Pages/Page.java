@@ -7,8 +7,14 @@ public class Page {
     public String text;
     public int pageNumber;
     public List<Choice> choices;  // Needs a constructor
+    public Proc proc;
 
     public Page(String text, int pageNumber, List<Choice> choices) {  // Constructor
+        this(text, pageNumber, choices, null);
+    }
+
+    public Page(String text, int pageNumber, List<Choice> choices, Proc p) {  // Constructor
+        this.proc = p;
         this.text = text;
         this.pageNumber = pageNumber;
         this.choices = choices;  // Setting class level variables in constructor
@@ -18,6 +24,12 @@ public class Page {
             this.choices = new ArrayList<>();
             this.choices.add(new Choice("Turn to the next page.", pageNumber + 1));
             this.choices.add(new Choice("Turn to the next page.", pageNumber + 2));
+        }
+    }
+
+    public void executeProc() {
+        if (proc != null) {
+            proc.execute();
         }
     }
 
