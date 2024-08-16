@@ -47,7 +47,7 @@ public class Main {
                 p.drawPage();
                 suppressRoom = true;
             } else if (p.choices.size() == 1) {
-                room = p.choices.get(0).pageNumber;
+                room = p.choices.get(0).pageNumber; // No choices
             } else if (p.isPageValid(i) != null) {
                 room = p.isPageValid(i).pageNumber;
             } else {

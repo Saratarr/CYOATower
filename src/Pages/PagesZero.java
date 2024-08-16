@@ -17,7 +17,7 @@ public class PagesZero {
                 "Passing through this door appears to be the only way out of this room. \n\n";
 
         List<Choice> choices = new ArrayList<>();
-        choices.add(new Choice("When you are ready to pass through the door, press '1'.", 1));
+        choices.add(new Choice("When you are ready to pass through the door, press enter.", 1));
 
         return new Page(pText, 0, choices);
     }
